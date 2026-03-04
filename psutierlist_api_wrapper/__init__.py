@@ -89,6 +89,9 @@ class Item:
 
         modularity = Modularity.from_str(str(item_raw.get("modularity", "UNKNOWN")))
 
+        # probably a better way to do this but hey it works
+        excluded = {"efficiency", "notes", "wattage_data", "year_dt", "topology", "tier", "series", "size", "modularity"}
+
         return Item(
             efficiency=eightyplus,
             notes=notes,
@@ -99,7 +102,7 @@ class Item:
             series=series,
             size=size,
             modularity=modularity,
-            **{k: v for k, v in item_raw.items() if k in _ITEM_FIELDS}
+            **{k: v for k, v in item_raw.items() if k in _ITEM_FIELDS and k not in excluded}
         )
 
 
