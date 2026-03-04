@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "psutierlist-api-wrapper"
-version = "v1.0.1"
+version = "v1.0.2"
 description = "API Wrapper"
 readme = "README.md"
 requires-python = ">=3.11"
