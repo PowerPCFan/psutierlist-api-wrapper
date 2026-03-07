@@ -3,8 +3,8 @@ from typing import NamedTuple
 
 
 class WattageData(NamedTuple):
-    wattages: list[Wattage]
-    min_max: WattageMinMax
+    wattages: list["Wattage"]
+    min_max: "WattageMinMax"
 
 
 class Wattage(NamedTuple):
@@ -18,9 +18,9 @@ class WattageMinMax(NamedTuple):
 
 
 class Topology(NamedTuple):
-    primary_conversion: PrimaryConversion
-    secondary_rectifier: SecondaryRectifier
-    secondary_regulation: SecondaryRegulation
+    primary_conversion: "PrimaryConversion"
+    secondary_rectifier: "SecondaryRectifier"
+    secondary_regulation: "SecondaryRegulation"
 
 
 class Series(NamedTuple):
